@@ -1,8 +1,5 @@
 /* ============================================
    IMPORT FONTS
-   — Syne : display bold futuriste
-   — Inter : corps de texte propre
-   — JetBrains Mono : code / dates
 ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
@@ -10,7 +7,6 @@
    VARIABLES
 ============================================ */
 :root {
-  /* Palette */
   --violet:        #7c3aed;
   --violet-clair:  #a78bfa;
   --violet-pale:   #ede9fe;
@@ -19,30 +15,27 @@
   --vert-clair:    #34d399;
   --vert-glow:     rgba(5, 150, 105, 0.18);
 
-  /* Fonds */
   --fond:          #080613;
   --surface:       #0e0a20;
   --surface-2:     #130f28;
   --carte:         #140f2b;
   --carte-hover:   #1c1638;
 
-  /* Bordures */
   --bord:          #251c46;
   --bord-md:       #3d2e6b;
   --bord-hover:    #6d28d9;
 
-  /* Textes */
   --texte:         #f0eeff;
   --muted:         #8b83b8;
   --muted-light:   #bab4dc;
 
-  /* Typographie */
   --font-display:  'Syne', system-ui, sans-serif;
   --font-body:     'Inter', system-ui, sans-serif;
   --font-mono:     'JetBrains Mono', monospace;
 
-  /* Motif serpent SVG inline — tuile 200×200 */
-  --snake-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3C!-- corps principal --%3E%3Cpath d='M100 36 C140 36 162 62 162 96 C162 130 140 154 100 154 C60 154 38 130 38 96 C38 66 58 44 84 38' fill='none' stroke='%237c3aed' stroke-width='9' stroke-linecap='round' opacity='0.13'/%3E%3C!-- queue et fin de spirale --%3E%3Cpath d='M84 38 C74 34 66 26 70 16 C74 7 84 6 91 13 C97 18 94 30 84 38' fill='none' stroke='%237c3aed' stroke-width='9' stroke-linecap='round' opacity='0.13'/%3E%3C!-- tête --%3E%3Cellipse cx='70' cy='14' rx='9' ry='8' fill='none' stroke='%237c3aed' stroke-width='2.5' opacity='0.16'/%3E%3C!-- oeil --%3E%3Ccircle cx='67' cy='12' r='2' fill='%23a78bfa' opacity='0.22'/%3E%3C!-- langue --%3E%3Cpath d='M62 14 L52 11 M62 14 L52 17' fill='none' stroke='%23a78bfa' stroke-width='2' stroke-linecap='round' opacity='0.17'/%3E%3C!-- écailles (arcs le long du corps) --%3E%3Cpath d='M130 68 Q136 62 142 68' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M148 84 Q155 78 160 86' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M152 104 Q158 98 162 106' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M144 124 Q150 118 155 126' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M128 140 Q134 134 140 141' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M108 150 Q114 144 120 151' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M86 152 Q92 146 98 153' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M64 144 Q70 138 76 145' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M48 128 Q54 122 59 129' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M40 108 Q46 102 51 109' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M42 86 Q48 80 53 87' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M53 66 Q59 60 65 67' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3C/svg%3E");
+  --snake-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath d='M100 36 C140 36 162 62 162 96 C162 130 140 154 100 154 C60 154 38 130 38 96 C38 66 58 44 84 38' fill='none' stroke='%237c3aed' stroke-width='9' stroke-linecap='round' opacity='0.13'/%3E%3Cpath d='M84 38 C74 34 66 26 70 16 C74 7 84 6 91 13 C97 18 94 30 84 38' fill='none' stroke='%237c3aed' stroke-width='9' stroke-linecap='round' opacity='0.13'/%3E%3Cellipse cx='70' cy='14' rx='9' ry='8' fill='none' stroke='%237c3aed' stroke-width='2.5' opacity='0.16'/%3E%3Ccircle cx='67' cy='12' r='2' fill='%23a78bfa' opacity='0.22'/%3E%3Cpath d='M62 14 L52 11 M62 14 L52 17' fill='none' stroke='%23a78bfa' stroke-width='2' stroke-linecap='round' opacity='0.17'/%3E%3Cpath d='M130 68 Q136 62 142 68' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M148 84 Q155 78 160 86' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M152 104 Q158 98 162 106' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M144 124 Q150 118 155 126' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M128 140 Q134 134 140 141' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M108 150 Q114 144 120 151' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M86 152 Q92 146 98 153' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M64 144 Q70 138 76 145' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M48 128 Q54 122 59 129' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M40 108 Q46 102 51 109' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M42 86 Q48 80 53 87' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M53 66 Q59 60 65 67' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3C/svg%3E");
+
+  --cursor-snake: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 6 C22 6 26 10 26 16 C26 22 22 26 16 26 C10 26 6 22 6 16 C6 11 9 7 13 6' fill='none' stroke='%23a78bfa' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M13 6 C11 5 9 3 10 1 C11 -1 13 -1 14.5 1 C15.5 2.5 15 5 13 6' fill='none' stroke='%23a78bfa' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='10.5' cy='0.5' r='2.5' fill='%237c3aed'/%3E%3Ccircle cx='9.5' cy='0' r='0.8' fill='%23ede9fe'/%3E%3Cpath d='M8 0.5 L4 -1 M8 0.5 L4 2' fill='none' stroke='%23a78bfa' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E");
 }
 
 /* ============================================
@@ -69,11 +62,17 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  cursor: var(--cursor-snake), auto;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: var(--cursor-snake), pointer;
+}
+
+button, .btn, .project-link, .certification-img {
+  cursor: var(--cursor-snake), pointer;
 }
 
 img {
@@ -110,6 +109,13 @@ img {
   letter-spacing: 0.01em;
 }
 
+.logo a {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .snake-icon {
   font-size: 1.2rem;
 }
@@ -130,9 +136,65 @@ img {
   letter-spacing: 0.01em;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
   color: var(--texte);
+  background: rgba(167, 139, 250, 0.12);
+}
+
+.nav a.active {
+  color: var(--violet-clair);
+}
+
+/* ============================================
+   MENU HAMBURGER — CSS PUR
+============================================ */
+.menu-toggle-input {
+  display: none;
+}
+
+.menu-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.18s;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.menu-burger:hover {
   background: rgba(167, 139, 250, 0.1);
+}
+
+.menu-burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--violet-clair);
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.18s ease;
+  transform-origin: center;
+}
+
+.menu-toggle-input:checked ~ .menu-burger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle-input:checked ~ .menu-burger span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.menu-toggle-input:checked ~ .menu-burger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu-toggle-input:checked ~ .nav {
+  display: flex;
 }
 
 /* ============================================
@@ -159,7 +221,6 @@ img {
   margin-right: auto;
 }
 
-/* label over each section title */
 .section-label {
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -183,7 +244,6 @@ img {
   opacity: 0.5;
 }
 
-/* section titles */
 .section h2 {
   font-family: var(--font-display);
   font-size: 2rem;
@@ -225,14 +285,11 @@ img {
   overflow: hidden;
 }
 
-/* large ambient glow */
 .hero::before {
   content: '';
   position: absolute;
-  top: 10%;
-  left: -15%;
-  width: 700px;
-  height: 700px;
+  top: 10%; left: -15%;
+  width: 700px; height: 700px;
   background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 68%);
   pointer-events: none;
 }
@@ -240,12 +297,65 @@ img {
 .hero::after {
   content: '';
   position: absolute;
-  bottom: 5%;
-  right: -10%;
-  width: 400px;
-  height: 400px;
+  bottom: 5%; right: -10%;
+  width: 400px; height: 400px;
   background: radial-gradient(circle, rgba(5, 150, 105, 0.07) 0%, transparent 65%);
   pointer-events: none;
+}
+
+/* ── Hero layout avec photo ── */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-photo-wrapper {
+  flex-shrink: 0;
+}
+
+.hero-photo-ring {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--violet), var(--violet-clair), var(--vert-clair));
+  box-shadow: 0 0 40px var(--violet-glow), 0 0 80px rgba(124, 58, 237, 0.1);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--fond);
+  display: block;
+}
+
+/* Fallback initiales si pas de photo */
+.hero-photo-initiale {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--fond);
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--violet-clair);
+  letter-spacing: -0.02em;
 }
 
 .badge {
@@ -281,14 +391,11 @@ img {
   position: relative;
 }
 
-/* underline glow on the name */
 .hero h1 span::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: 2px;
-  width: 100%;
-  height: 3px;
+  left: 0; bottom: 2px;
+  width: 100%; height: 3px;
   background: linear-gradient(90deg, var(--violet), var(--violet-clair), transparent);
   border-radius: 2px;
   opacity: 0.6;
@@ -305,7 +412,6 @@ img {
   letter-spacing: 0.01em;
 }
 
-.hero > .section > p,
 .hero p {
   max-width: 560px;
   font-size: 1rem;
@@ -332,7 +438,6 @@ img {
   font-family: var(--font-body);
   font-size: 0.86rem;
   font-weight: 600;
-  cursor: pointer;
   transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
   border: none;
   letter-spacing: 0.01em;
@@ -363,7 +468,7 @@ img {
 }
 
 /* ============================================
-   À PROPOS – info lines
+   INFOS
 ============================================ */
 .infos {
   display: flex;
@@ -398,7 +503,7 @@ img {
 }
 
 /* ============================================
-   COMPÉTENCES – skill blocks
+   SKILL BLOCKS
 ============================================ */
 .skills-grid {
   display: grid;
@@ -417,7 +522,6 @@ img {
               background 0.22s ease, box-shadow 0.22s ease;
 }
 
-/* accent top bar */
 .skill-block::before {
   content: '';
   position: absolute;
@@ -451,6 +555,12 @@ img {
   padding: 0;
 }
 
+.skill-block p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -474,12 +584,6 @@ img {
   color: var(--texte);
 }
 
-.skill-block p {
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.65;
-}
-
 /* ============================================
    TIMELINE
 ============================================ */
@@ -499,7 +603,6 @@ img {
   margin-bottom: 0;
 }
 
-/* dot on the line */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -578,7 +681,7 @@ img {
 }
 
 /* ============================================
-   PROJETS / VEILLE
+   PROJECT CARDS
 ============================================ */
 .projects-grid {
   display: grid;
@@ -699,7 +802,6 @@ img {
   border: 1px solid var(--bord-md);
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
-  cursor: pointer;
 }
 
 .certification-img:hover {
@@ -779,23 +881,17 @@ img {
 ============================================ */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--fond); }
-::-webkit-scrollbar-thumb {
-  background: var(--bord-md);
-  border-radius: 3px;
-}
+::-webkit-scrollbar-thumb { background: var(--bord-md); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--violet); }
 
 /* ============================================
-   SELECTION
+   SELECTION & FOCUS
 ============================================ */
 ::selection {
   background: rgba(124, 58, 237, 0.3);
   color: var(--texte);
 }
 
-/* ============================================
-   FOCUS (accessibilité)
-============================================ */
 :focus-visible {
   outline: 2px solid var(--violet-clair);
   outline-offset: 3px;
@@ -803,13 +899,42 @@ img {
 }
 
 /* ============================================
+   ANIMATIONS FADE-IN AU SCROLL
+============================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in:nth-child(1) { transition-delay: 0s;    }
+.fade-in:nth-child(2) { transition-delay: 0.08s; }
+.fade-in:nth-child(3) { transition-delay: 0.16s; }
+.fade-in:nth-child(4) { transition-delay: 0.24s; }
+.fade-in:nth-child(5) { transition-delay: 0.32s; }
+.fade-in:nth-child(6) { transition-delay: 0.40s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================
    RESPONSIVE — 768px
 ============================================ */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 1.25rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.85rem 1.25rem;
     gap: 0.5rem;
   }
 
@@ -828,13 +953,52 @@ img {
   .hero::after {
     display: none;
   }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .hero-photo-ring {
+    width: 130px;
+    height: 130px;
+  }
 }
 
 /* ============================================
    RESPONSIVE — 640px
 ============================================ */
 @media (max-width: 640px) {
-  .nav { display: none; }
+
+  /* Affiche le bouton burger */
+  .menu-burger {
+    display: flex;
+  }
+
+  /* Cache la nav par défaut */
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(8, 6, 19, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--bord);
+    padding: 0.75rem 1.25rem 1.25rem;
+    gap: 4px;
+    z-index: 98;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 8px;
+    width: 100%;
+  }
 
   .hero h1 { font-size: 2.3rem; }
 
@@ -852,18 +1016,4 @@ img {
   .hero-cta { flex-direction: column; }
 
   .section h2 { font-size: 1.65rem; }
-}
-/* ============================================
-   CURSEUR SERPENT
-============================================ */
-:root {
-  --cursor-snake: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 6 C22 6 26 10 26 16 C26 22 22 26 16 26 C10 26 6 22 6 16 C6 11 9 7 13 6' fill='none' stroke='%23a78bfa' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M13 6 C11 5 9 3 10 1 C11 -1 13 -1 14.5 1 C15.5 2.5 15 5 13 6' fill='none' stroke='%23a78bfa' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='10.5' cy='0.5' r='2.5' fill='%237c3aed'/%3E%3Ccircle cx='9.5' cy='0' r='0.8' fill='%23ede9fe'/%3E%3Cpath d='M8 0.5 L4 -1 M8 0.5 L4 2' fill='none' stroke='%23a78bfa' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E");
-}
-
-body {
-  cursor: var(--cursor-snake), auto;
-}
-
-a, button, .btn, .nav a, .project-link, .certification-img {
-  cursor: var(--cursor-snake), pointer;
 }
