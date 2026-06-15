@@ -4,68 +4,89 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Contact – Abdoulaye Sibiri Sylla, étudiant BTS SIO SLAM à Étampes." />
-  <title>Contact – Abdoulaye Sibiri Sylla</title>
+  <title>Contact — Abdoulaye Sibiri Sylla</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="gsh_photo.png">
 </head>
 <body>
 
   <header class="header">
- <div class="logo">
-  <a href="#" style="text-decoration: none; color: inherit;">
-    <span class="snake-icon">🐍</span> Abdoulaye Sibiri Sylla
-  </a>
-</div>
-  <nav class="nav">
-    <a href="index.html">Accueil</a>
-    <a href="Bts_sio.html">BTS SIO</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <div class="logo">
+      <a href="index.html">
+        <span class="snake-icon">🐍</span> Abdoulaye Sibiri Sylla
+      </a>
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+    <label for="menu-toggle" class="menu-burger" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="Bts_sio.html">BTS SIO</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
 
-<main>
+  <main>
 
-  <section class="section">
-    <div class="section-label">Me contacter</div>
-    <h2>Contact</h2>
-    <p style="margin-bottom:1.5rem; max-width:540px;">
-      N'hésitez pas à me contacter pour toute opportunité de stage,
-      d'alternance ou de collaboration.
-    </p>
+    <section class="section fade-in">
+      <div class="section-label">Me contacter</div>
+      <h2>Contact</h2>
+      <p style="margin-bottom:1.5rem; max-width:540px;">
+        N'hésitez pas à me contacter pour toute opportunité de stage,
+        d'alternance ou de collaboration.
+      </p>
+      <ul class="contact-list">
+        <li class="fade-in">
+          <strong>Email</strong>
+          <a href="mailto:sibiri.sylla.pro@gmail.com">sibiri.sylla.pro@gmail.com</a>
+        </li>
+        <li class="fade-in">
+          <strong>GitHub</strong>
+          <a href="https://github.com/siby-14" target="_blank" rel="noopener noreferrer">
+            github.com/siby-14
+          </a>
+        </li>
+        <li class="fade-in">
+          <strong>LinkedIn</strong>
+          <a href="https://www.linkedin.com/in/abdoulaye-sibiri-sylla-8bb6b63a8/"
+             target="_blank" rel="noopener noreferrer">
+            Mon profil LinkedIn
+          </a>
+        </li>
+        <li class="fade-in">
+          <strong>CV</strong>
+          <a href="Cv%20Abdoulaye%20Sibiri%20Sylla.pdf"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-primary"
+             style="padding:0.4rem 1rem; font-size:0.82rem;">
+            📄 Télécharger mon CV
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <ul class="contact-list">
-      <li>
-        <strong>Email</strong>
-        <a href="mailto:sibiri.sylla.pro@gmail.com">sibiri.sylla.pro@gmail.com</a>
-      </li>
-      <li>
-        <strong>GitHub</strong>
-        <a href="https://github.com/siby-14" target="_blank" rel="noopener noreferrer">
-          github.com/siby-14
-        </a>
-      </li>
-      <li>
-        <strong>LinkedIn</strong>
-        <a href="https://www.linkedin.com/in/abdoulaye-sibiri-sylla-8bb6b63a8/"
-           target="_blank" rel="noopener noreferrer">
-          Mon profil LinkedIn
-        </a>
-      </li>
-      <li>
-        <strong>CV</strong>
-        <a href="Cv%20Abdoulaye%20Sibiri%20Sylla.pdf" target="_blank" rel="noopener noreferrer"
-           class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.82rem;">
-          📄 Télécharger mon CV
-        </a>
-      </li>
-    </ul>
-  </section>
+  </main>
 
-</main>
+  <footer class="footer">
+    <p>&copy; 2026 Abdoulaye Sibiri Sylla — Portfolio BTS SIO SLAM</p>
+  </footer>
 
-<footer class="footer">
-  <p>&copy; 2026 Abdoulaye Sibiri Sylla — Portfolio BTS SIO SLAM</p>
-</footer>
+  <script>
+    const observateur = new IntersectionObserver(
+      (entrees) => {
+        entrees.forEach((entree) => {
+          if (entree.isIntersecting) {
+            entree.target.classList.add('visible');
+            observateur.unobserve(entree.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.fade-in').forEach((el) => observateur.observe(el));
+  </script>
 
 </body>
 </html>
