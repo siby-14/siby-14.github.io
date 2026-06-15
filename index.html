@@ -4,104 +4,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio BTS SIO SLAM de Abdoulaye Sibiri Sylla : présentation, compétences et parcours.">
-  <title>Portfolio - Abdoulaye Sibiri Sylla - BTS SIO SLAM</title>
+  <title>Abdoulaye Sibiri Sylla — Portfolio BTS SIO SLAM</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="gsh_photo.png">
 </head>
 <body>
 
   <header class="header">
- <div class="logo">
-  <a href="#" style="text-decoration: none; color: inherit;">
-    <span class="snake-icon">🐍</span> Abdoulaye Sibiri Sylla
-  </a>
-</div>
-
+    <div class="logo">
+      <a href="index.html">
+        <span class="snake-icon">🐍</span> Abdoulaye Sibiri Sylla
+      </a>
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+    <label for="menu-toggle" class="menu-burger" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </label>
     <nav class="nav">
-      <a href="index.html">Accueil</a>
+      <a href="index.html" class="active">Accueil</a>
       <a href="Bts_sio.html">BTS SIO</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section id="accueil" class="section hero">
-      <div class="badge">🐍 BTS SIO – Option SLAM</div>
-      <h1>Abdoulaye Sibiri Sylla</h1>
-      <h2>Étudiant en BTS SIO option SLAM</h2>
-      <p>
-        Passionné par l'informatique, je construis progressivement mon profil de développeur
-        à travers mes cours, mes projets, mes stages et ma passion pour le jeu vidéo.
-      </p>
-
-    <section id="apropos" class="section">
-      <h2>À propos</h2>
-      <p>
-        Je suis étudiant en BTS SIO option SLAM au lycée Geoffroy-Saint-Hilaire à Étampes.
-        Mon objectif est de développer des compétences solides en développement, bases de données
-        et conception d’applications afin d’évoluer vers un métier du développement logiciel.
-      </p>
-
-      <div class="infos">
-        <div class="info-ligne">📍 <strong>Étampes, France</strong></div>
-        <div class="info-ligne">🏫 <strong>Lycée Geoffroy-Saint-Hilaire — Promo 2025–2027</strong></div>
-        <div class="info-ligne">✉️ <strong>sibiri.sylla.pro@gmail.com</strong></div>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="badge">🐍 BTS SIO – Option SLAM</div>
+          <h1>Abdoulaye Sibiri Sylla</h1>
+          <h2>Étudiant en BTS SIO option SLAM</h2>
+          <p>
+            Passionné par l'informatique, je construis progressivement mon profil de développeur
+            à travers mes cours, mes projets, mes stages et ma passion pour le jeu vidéo.
+          </p>
+          <div class="hero-cta">
+            <a href="Bts_sio.html" class="btn btn-primary">Voir mes projets</a>
+            <a href="contact.html" class="btn btn-secondary">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-ring">
+            <img src="gsh_photo.png" alt="Photo de profil d'Abdoulaye Sibiri Sylla" class="hero-photo">
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="competences" class="section">
-      <h2>Compétences</h2>
+    <!-- À PROPOS -->
+    <section id="apropos" class="section fade-in">
+      <div class="section-label">À propos</div>
+      <h2>Qui suis-je ?</h2>
+      <p>
+        Je suis étudiant en BTS SIO option SLAM au lycée Geoffroy-Saint-Hilaire à Étampes.
+        Mon objectif est de développer des compétences solides en développement, bases de données
+        et conception d'applications afin d'évoluer vers un métier du développement logiciel.
+      </p>
+      <div class="infos">
+        <div class="info-ligne fade-in">📍 <strong>Étampes, France</strong></div>
+        <div class="info-ligne fade-in">🏫 <strong>Lycée Geoffroy-Saint-Hilaire — Promo 2025–2027</strong></div>
+        <div class="info-ligne fade-in">✉️ <strong>sibiri.sylla.pro@gmail.com</strong></div>
+      </div>
+    </section>
 
+    <!-- COMPÉTENCES -->
+    <section id="competences" class="section section-alt fade-in">
+      <div class="section-label">Compétences</div>
+      <h2>Compétences</h2>
       <div class="skills-grid">
-        <article class="skill-block">
+        <article class="skill-block fade-in">
           <h3>Langages</h3>
           <p>HTML, CSS, JavaScript, Java, SQL.</p>
         </article>
-
-        <article class="skill-block">
+        <article class="skill-block fade-in">
           <h3>Bases de données</h3>
           <p>Conception simple de bases de données, requêtes SQL.</p>
         </article>
-
-        <article class="skill-block">
+        <article class="skill-block fade-in">
           <h3>Outils</h3>
           <p>GitHub, VS Code, Vue.js, documentation de projet.</p>
         </article>
-
-        <article class="skill-block">
+        <article class="skill-block fade-in">
           <h3>Environnement</h3>
           <p>Linux, Windows, travail en autonomie et en équipe.</p>
         </article>
       </div>
     </section>
 
-    <section id="parcours" class="section section-alt">
+    <!-- PARCOURS -->
+    <section id="parcours" class="section fade-in">
+      <div class="section-label">Parcours</div>
       <h2>Parcours</h2>
-
       <div class="timeline">
-        <article class="timeline-item">
-          <h3>2022: DIPLOME NATIONAL DU BREVET</h3>
+        <article class="timeline-item fade-in">
+          <div class="timeline-date">2022</div>
+          <h3>Diplôme National du Brevet</h3>
           <p>Collège de Guinette, Étampes.</p>
         </article>
-
-                <article class="timeline-item">
-          <h3>Baccalauréat STI2D SIN</h3>
+        <article class="timeline-item fade-in">
+          <div class="timeline-date">2022 – 2025</div>
+          <h3>Baccalauréat STI2D option SIN</h3>
           <p>Lycée Geoffroy-Saint-Hilaire, Étampes.</p>
         </article>
-
-        <article class="timeline-item">
-          <h3>2025 - 2027 : BTS SIO option SLAM</h3>
+        <article class="timeline-item fade-in">
+          <div class="timeline-date">2025 – 2027</div>
+          <h3>BTS SIO option SLAM</h3>
           <p>Lycée Geoffroy-Saint-Hilaire, Étampes.</p>
         </article>
-
-
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Abdoulaye Sibiri Sylla - Portfolio BTS SIO SLAM</p>
+    <p>&copy; 2026 Abdoulaye Sibiri Sylla — Portfolio BTS SIO SLAM</p>
   </footer>
+
+  <script>
+    const observateur = new IntersectionObserver(
+      (entrees) => {
+        entrees.forEach((entree) => {
+          if (entree.isIntersecting) {
+            entree.target.classList.add('visible');
+            observateur.unobserve(entree.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.fade-in').forEach((el) => observateur.observe(el));
+  </script>
 
 </body>
 </html>
