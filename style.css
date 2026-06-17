@@ -1,61 +1,41 @@
 /* ============================================
    IMPORT FONTS
-   - Syne : titre/affichage (gras 700, 800)
-   - Inter : texte corps (400-700)
-   - JetBrains Mono : code/technique (400, 500)
 ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ============================================
-   VARIABLES - Couleurs
-   Violet : actions principales, accents
-   Vert : succès, liens projets
-   Fond sombre : thème nuit
+   VARIABLES
 ============================================ */
 :root {
-  /* Violet - Actions principales */
   --violet:        #7c3aed;
   --violet-clair:  #a78bfa;
   --violet-pale:   #ede9fe;
   --violet-glow:   rgba(124, 58, 237, 0.22);
-  
-  /* Vert - Succès/projets */
   --vert:          #059669;
   --vert-clair:    #34d399;
   --vert-glow:     rgba(5, 150, 105, 0.18);
 
-  /* Fond - Thème sombre */
   --fond:          #080613;
   --surface:       #0e0a20;
   --surface-2:     #130f28;
   --carte:         #140f2b;
   --carte-hover:   #1c1638;
 
-  /* Bordures */
   --bord:          #251c46;
   --bord-md:       #3d2e6b;
   --bord-hover:    #6d28d9;
 
-  /* Texte */
   --texte:         #f0eeff;
   --muted:         #8b83b8;
   --muted-light:   #bab4dc;
 
-  /* Fonts */
   --font-display:  'Syne', system-ui, sans-serif;
   --font-body:     'Inter', system-ui, sans-serif;
   --font-mono:     'JetBrains Mono', monospace;
-  /* ... reste des variables ... */
-/* AVANT (trop répété) */
-button, .btn, .project-link, .certification-img {
-  cursor: var(--cursor-snake), pointer;
-}
 
-/* APRÈS (plus simple - héritage automatique) */
-/* Le cursor est déjà défini sur body, pas besoin de répéter */
-/* Exception pour les éléments qui doivent avoir pointer : */
-.btn, .project-link, .certification-img {
-  cursor: var(--cursor-snake), pointer;
+  --snake-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath d='M100 36 C140 36 162 62 162 96 C162 130 140 154 100 154 C60 154 38 130 38 96 C38 66 58 44 84 38' fill='none' stroke='%237c3aed' stroke-width='9' stroke-linecap='round' opacity='0.13'/%3E%3Cpath d='M84 38 C74 34 66 26 70 16 C74 7 84 6 91 13 C97 18 94 30 84 38' fill='none' stroke='%237c3aed' stroke-width='9' stroke-linecap='round' opacity='0.13'/%3E%3Cellipse cx='70' cy='14' rx='9' ry='8' fill='none' stroke='%237c3aed' stroke-width='2.5' opacity='0.16'/%3E%3Ccircle cx='67' cy='12' r='2' fill='%23a78bfa' opacity='0.22'/%3E%3Cpath d='M62 14 L52 11 M62 14 L52 17' fill='none' stroke='%23a78bfa' stroke-width='2' stroke-linecap='round' opacity='0.17'/%3E%3Cpath d='M130 68 Q136 62 142 68' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M148 84 Q155 78 160 86' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M152 104 Q158 98 162 106' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M144 124 Q150 118 155 126' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M128 140 Q134 134 140 141' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M108 150 Q114 144 120 151' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M86 152 Q92 146 98 153' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M64 144 Q70 138 76 145' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M48 128 Q54 122 59 129' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M40 108 Q46 102 51 109' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M42 86 Q48 80 53 87' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3Cpath d='M53 66 Q59 60 65 67' fill='none' stroke='%23a78bfa' stroke-width='1.5' opacity='0.09'/%3E%3C/svg%3E");
+
+  --cursor-snake: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 6 C22 6 26 10 26 16 C26 22 22 26 16 26 C10 26 6 22 6 16 C6 11 9 7 13 6' fill='none' stroke='%23a78bfa' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M13 6 C11 5 9 3 10 1 C11 -1 13 -1 14.5 1 C15.5 2.5 15 5 13 6' fill='none' stroke='%23a78bfa' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='10.5' cy='0.5' r='2.5' fill='%237c3aed'/%3E%3Ccircle cx='9.5' cy='0' r='0.8' fill='%23ede9fe'/%3E%3Cpath d='M8 0.5 L4 -1 M8 0.5 L4 2' fill='none' stroke='%23a78bfa' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E");
 }
 
 /* ============================================
@@ -167,7 +147,7 @@ img {
 }
 
 /* ============================================
-   MENU HAMBURGER — CSS PUR (AMÉLIORÉ)
+   MENU HAMBURGER — CSS PUR
 ============================================ */
 .menu-toggle-input {
   display: none;
@@ -215,13 +195,6 @@ img {
 
 .menu-toggle-input:checked ~ .nav {
   display: flex;
-}
-
-/* Amélioration : évite le double clic sur mobile */
-@media (hover: none) and (max-width: 640px) {
-  .menu-burger {
-    cursor: pointer;
-  }
 }
 
 /* ============================================
@@ -1043,4 +1016,3 @@ img {
   .hero-cta { flex-direction: column; }
 
   .section h2 { font-size: 1.65rem; }
-}
