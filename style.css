@@ -26,8 +26,8 @@
   --bord-hover:    #6d28d9;
 
   --texte:         #f0eeff;
-  --muted:         #8b83b8;
-  --muted-light:   #bab4dc;
+  --muted:        #a099cc;   /* était #8b83b8 — +20% luminosité */
+  --muted-light:  #cbc6e8;   /* était #bab4dc — plus lisible */
 
   --font-display:  'Syne', system-ui, sans-serif;
   --font-body:     'Inter', system-ui, sans-serif;
