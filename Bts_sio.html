@@ -25,6 +25,7 @@
   <a href="Bts_sio.html" class="active">BTS SIO</a>
   <a href="#projets">TP</a>
   <a href="#stage">Stage</a>
+  <!-- CORRECTION 7 : id de section corrigé en minuscule, lien mis à jour -->
   <a href="#certifications">Certifs</a>
   <a href="#veille">Veille</a>
   <a href="#note-synthese">NDS</a>
@@ -107,7 +108,9 @@
           <p><strong>Objectif :</strong> Gérer les comptes utilisateurs et les permissions sur un système Linux.</p>
           <p><strong>Compétences :</strong> Linux, gestion des droits, sécurité des accès.</p>
           <div class="project-tech">
-            <span>Linux</span><span>Bash</span><span>Droits UNIX</span> <a href="Compte Rendu - TP2 Java BTS SIO.pdf"
+            <!-- CORRECTION 3 : href corrigé vers le bon fichier du TP Linux -->
+            <span>Linux</span><span>Bash</span><span>Droits UNIX</span>
+            <a href="Compte Rendu - TP Utilisateurs et droits Linux BTS SIO.pdf"
                class="project-link"
                target="_blank"
                rel="noopener noreferrer">
@@ -185,22 +188,26 @@
       </div>
     </section>
 
-<section id="Certifications" class="section">
-  <h2>Certifications</h2>
-  <div class="skills-grid">
-    <article class="skill-block">
-      <h1>SecNumAcadémie ANSSI</h1>
-      <div class="Certification secNumacademie">
-        <a href="Certification secNumacademie.pdf" target="_blank" rel="noopener noreferrer">
-          <img src="Certification secNumacademie.pdf" 
-               alt="Certification SecNumAcadémie ANSSI" 
-               class="certification-img"/>
-        </a>
+    <!-- CERTIFICATIONS -->
+    <!-- CORRECTION 1 : id passé en minuscule pour correspondre au lien #certifications dans la nav -->
+    <section id="certifications" class="section">
+      <h2>Certifications</h2>
+      <div class="skills-grid">
+        <article class="skill-block">
+          <!-- CORRECTION 6 : <h1> remplacé par <h3> (sémantique correcte dans un article) -->
+          <h3>SecNumAcadémie ANSSI</h3>
+          <div class="Certification secNumacademie">
+            <!-- CORRECTION 2 : un PDF ne peut pas être affiché comme <img>.
+                 Remplacé par un lien simple vers le fichier PDF. -->
+            <a href="Certification secNumacademie.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+              📄 Voir la certification (PDF)
+            </a>
+          </div>
+          <p>SecNumAcadémie est le MOOC officiel de l'ANSSI...</p>
+        </article>
       </div>
-      <p>SecNumAcadémie est le MOOC officiel de l'ANSSI...</p>
-    </article>
-  </div>
-</section>
+    </section>
+
     <!-- NOTE DE SYNTHÈSE -->
     <section id="note-synthese" class="section section-alt fade-in">
       <div class="section-label">Document de synthèse</div>
@@ -212,9 +219,10 @@
           <p style="margin-top:0.4rem;"><strong>Problématique :</strong> Comment automatiser la vérification de sauvegardes pour garantir leur fraîcheur sans intervention manuelle ?</p>
           <p style="margin-top:0.4rem;"><strong>Solution :</strong> Script Python modulaire exploitant pathlib et argparse, déployable sur n'importe quelle machine via la ligne de commande.</p>
           <p style="margin-top:0.4rem;"><strong>Enseignements :</strong> Lecture de documentation technique, choix d'outils adaptés, structuration du code en fonctions réutilisables.</p>
-          <a href="" class="project-link" target="_blank" rel="noopener noreferrer" style="margin-top:1rem;">
-            📄 en cours
-          </a>
+          <!-- CORRECTION 4 : href vide remplacé par un texte informatif en attendant le document -->
+          <span class="project-link" style="margin-top:1rem; opacity:0.6; cursor:default;">
+            📄 Document en cours de rédaction
+          </span>
         </article>
       </div>
     </section>
@@ -255,22 +263,24 @@
             Cinq stades supplémentaires testés pour le système SAOT complet :
             Arena Font Nova, Ilha do Retiro, Beira-Rio, Estádio Maião et Mangueirão.
           </p>
-          <div class="project-tech"><span>SAOT</span><span>Ballon conecter</span><span>arbitrage ia</span></div>
+          <div class="project-tech"><span>SAOT</span><span>Ballon connecté</span><span>Arbitrage IA</span></div>
           <a href="Five more stadiums trialled semi-automated offside last weekend _ OneFootball.pdf"
              class="project-link" target="_blank" rel="noopener noreferrer">Voir l'article</a>
         </article>
 
         <article class="project-card fade-in">
-          <h3>Le premier Mondial ultra-connecté, Football IA Pro pour aider les équipes, Avatars en 3D, caméras embarquées, où est la place de l'arbitre ?</h3>
-          <p><strong>Date :</strong>10/06/2026 </p>
+          <h3>Le premier Mondial ultra-connecté — où est la place de l'arbitre ?</h3>
+          <p><strong>Date :</strong> 10/06/2026</p>
+          <!-- CORRECTION 5 : description remplacée par le vrai contenu de l'article (Mondial/IA) -->
           <p>
-            Cinq stades supplémentaires testés pour le système SAOT complet :
-            Arena Font Nova, Ilha do Retiro, Beira-Rio, Estádio Maião et Mangueirão.
+            La Coupe du Monde 2026 s'annonce comme la plus connectée de l'histoire :
+            Football IA Pro pour assister les équipes, avatars 3D, caméras embarquées…
+            et une question centrale sur le rôle futur de l'arbitre humain.
           </p>
-          <div class="project-tech"><span>Ballon connecter</span><span>arbitrage ia</span><span>coupe du monde</span><span>SAOT</span></div>
+          <div class="project-tech"><span>Ballon connecté</span><span>Arbitrage IA</span><span>Coupe du monde</span><span>SAOT</span></div>
           <a href="Le premier Mondial ultra-connecté, Football IA Pro pour aider les équipes, Avatars en 3D, caméras embarquées, où est la place de l'arbitre _ - Eurosport.pdf"
              class="project-link" target="_blank" rel="noopener noreferrer">Voir l'article</a>
-          </article>
+        </article>
 
       </div>
     </section>
