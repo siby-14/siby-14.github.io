@@ -16,7 +16,8 @@
         <span class="snake-icon">🐍</span> Abdoulaye Sibiri Sylla
       </a>
     </div>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+    <!-- CORRECTION : aria-hidden ajouté sur l'input checkbox pour l'accessibilité -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-hidden="true">
     <label for="menu-toggle" class="menu-burger" aria-label="Ouvrir le menu">
       <span></span><span></span><span></span>
     </label>
@@ -25,7 +26,6 @@
   <a href="Bts_sio.html" class="active">BTS SIO</a>
   <a href="#projets">TP</a>
   <a href="#stage">Stage</a>
-  <!-- CORRECTION 7 : id de section corrigé en minuscule, lien mis à jour -->
   <a href="#certifications">Certifs</a>
   <a href="#note-synthese">NDS</a>
   <a href="#veille">Veille</a>
@@ -105,10 +105,10 @@
         <article class="project-card fade-in">
           <h3>TP Serveur DHCP</h3>
           <p><strong>Contexte :</strong> Cours BTS SIO – administration système.</p>
-          <p><strong>Objectif :</strong> création d'un serveur DHC.</p>
-          <p><strong>Compétences :</strong> DHCP,adressage IP.</p>
+          <!-- CORRECTION : "DHC" corrigé en "DHCP" -->
+          <p><strong>Objectif :</strong> création d'un serveur DHCP.</p>
+          <p><strong>Compétences :</strong> DHCP, adressage IP.</p>
           <div class="project-tech">
-            <!-- CORRECTION 3 : href corrigé vers le bon fichier du TP Linux -->
             <span>DHCP</span><span>Bash</span><span>adressage IP</span>
             <a href="Sylla_Compte_rendu_TP3.docx.pdf"
                class="project-link"
@@ -126,7 +126,8 @@
           <p><strong>Compétences :</strong> Logique, développement, tests, correction de bugs.</p>
           <div class="project-tech">
             <span>Java</span><span>POO</span><span>Tests</span>
-              <a href="Compte Rendu - TP2 Java BTS SIO.pdf"
+              <!-- CORRECTION : espaces encodés en %20 dans le href -->
+              <a href="Compte%20Rendu%20-%20TP2%20Java%20BTS%20SIO.pdf"
                class="project-link"
                target="_blank"
                rel="noopener noreferrer">
@@ -142,7 +143,8 @@
           <p><strong>Compétences :</strong> Autonomie, recherche, mise en œuvre technique.</p>
           <div class="project-tech">
             <span>Linux</span><span>analysé de besoin</span>
-             <a href="Étude de cas _ La Quincaillerie.pdf"
+             <!-- CORRECTION : espaces encodés en %20 dans le href -->
+             <a href="%C3%89tude%20de%20cas%20_%20La%20Quincaillerie.pdf"
                class="project-link"
                target="_blank"
                rel="noopener noreferrer">
@@ -189,12 +191,10 @@
     </section>
 
     <!-- CERTIFICATIONS -->
-    <!-- CORRECTION 1 : id passé en minuscule pour correspondre au lien #certifications dans la nav -->
     <section id="certifications" class="section">
       <h2>Certifications</h2>
       <div class="skills-grid">
         <article class="skill-block">
-          <!-- CORRECTION 6 : <h1> remplacé par <h3> (sémantique correcte dans un article) -->
           <h3>SecNumAcadémie ANSSI</h3>
           <div class="Certification secNumacademie">
              <p>
@@ -206,16 +206,16 @@
   atteste d'un niveau de sensibilisation reconnu par les professionnels 
   du secteur.
 </p>
-            <a href="Certification secNumacademie.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
+            <a href="Certification%20secNumacademie.pdf" target="_blank" rel="noopener noreferrer" class="project-link">
               📄 Voir la certification (PDF)
             </a>
           </div>
-<div class="skill-tags" style="margin-top:0.9rem;">
-  <span class="tag">Cybersécurité</span>
-  <span class="tag">Réseaux</span>
-  <span class="tag">Cryptographie</span>
-  <span class="tag">ANSSI</span>
-</div>
+          <div class="skill-tags" style="margin-top:0.9rem;">
+            <span class="tag">Cybersécurité</span>
+            <span class="tag">Réseaux</span>
+            <span class="tag">Cryptographie</span>
+            <span class="tag">ANSSI</span>
+          </div>
         </article>
       </div>
     </section>
@@ -231,11 +231,10 @@
           <p style="margin-top:0.4rem;"><strong>Problématique :</strong> Comment automatiser la vérification de sauvegardes pour garantir leur fraîcheur sans intervention manuelle ?</p>
           <p style="margin-top:0.4rem;"><strong>Solution :</strong> Script Python modulaire exploitant pathlib et argparse, déployable sur n'importe quelle machine via la ligne de commande.</p>
           <p style="margin-top:0.4rem;"><strong>Enseignements :</strong> Lecture de documentation technique, choix d'outils adaptés, structuration du code en fonctions réutilisables.</p>
-          <!-- CORRECTION 4 : href vide remplacé par un texte informatif en attendant le document -->
-          <span class="project-link" style="margin-top:1rem; opacity:0.6; cursor:default;">
-          <a href="NDS_Abdoulaye.docx" target="_blank" rel="noopener noreferrer" class="project-link">
+          <!-- CORRECTION : balise <span> parasite supprimée, <a> correctement fermée -->
+          <a href="NDS_Abdoulaye.docx" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-top:1rem; display:inline-block;">
             📄 Voir ma note de synthèse
-          </span>
+          </a>
         </article>
       </div>
     </section>
@@ -265,7 +264,8 @@
             du hors-jeu (SAOT) pour améliorer l'arbitrage, selon une annonce officielle.
           </p>
           <div class="project-tech"><span>SAOT</span><span>Football</span><span>IA arbitrage</span></div>
-          <a href="Foot_ VAR, hors-jeu, formation, tech... L'arbitrage marocain entame sa mue , H24info.pdf"
+          <!-- CORRECTION : espaces encodés en %20 dans le href -->
+          <a href="Foot_%20VAR%2C%20hors-jeu%2C%20formation%2C%20tech...%20L%27arbitrage%20marocain%20entame%20sa%20mue%20%2C%20H24info.pdf"
              class="project-link" target="_blank" rel="noopener noreferrer">Voir l'article</a>
         </article>
 
@@ -277,21 +277,22 @@
             Arena Font Nova, Ilha do Retiro, Beira-Rio, Estádio Maião et Mangueirão.
           </p>
           <div class="project-tech"><span>SAOT</span><span>Ballon connecté</span><span>Arbitrage IA</span></div>
-          <a href="Five more stadiums trialled semi-automated offside last weekend _ OneFootball.pdf"
+          <!-- CORRECTION : espaces encodés en %20 dans le href -->
+          <a href="Five%20more%20stadiums%20trialled%20semi-automated%20offside%20last%20weekend%20_%20OneFootball.pdf"
              class="project-link" target="_blank" rel="noopener noreferrer">Voir l'article</a>
         </article>
 
         <article class="project-card fade-in">
           <h3>Le premier Mondial ultra-connecté — où est la place de l'arbitre ?</h3>
           <p><strong>Date :</strong> 10/06/2026</p>
-          <!-- CORRECTION 5 : description remplacée par le vrai contenu de l'article (Mondial/IA) -->
           <p>
             La Coupe du Monde 2026 s'annonce comme la plus connectée de l'histoire :
             Football IA Pro pour assister les équipes, avatars 3D, caméras embarquées…
             et une question centrale sur le rôle futur de l'arbitre humain.
           </p>
           <div class="project-tech"><span>Ballon connecté</span><span>Arbitrage IA</span><span>Coupe du monde</span><span>SAOT</span></div>
-          <a href="Le premier Mondial ultra-connecté, Football IA Pro pour aider les équipes, Avatars en 3D, caméras embarquées, où est la place de l'arbitre _ - Eurosport.pdf"
+          <!-- CORRECTION : espaces encodés en %20 dans le href -->
+          <a href="Le%20premier%20Mondial%20ultra-connect%C3%A9%2C%20Football%20IA%20Pro%20pour%20aider%20les%20%C3%A9quipes%2C%20Avatars%20en%203D%2C%20cam%C3%A9ras%20embarqu%C3%A9es%2C%20o%C3%B9%20est%20la%20place%20de%20l%27arbitre%20_%20-%20Eurosport.pdf"
              class="project-link" target="_blank" rel="noopener noreferrer">Voir l'article</a>
         </article>
 
